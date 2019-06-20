@@ -827,6 +827,25 @@ Discarded input sections
  .bss           0x00000000        0x0 Src\main.o
  .ARM.extab.text.Error_Handler
                 0x00000000        0x0 Src\main.o
+ .text          0x00000000        0x0 Src\printf.o
+ .data          0x00000000        0x0 Src\printf.o
+ .bss           0x00000000        0x0 Src\printf.o
+ .text.__io_putchar
+                0x00000000       0x1c Src\printf.o
+ .text.__io_getchar
+                0x00000000       0x20 Src\printf.o
+ .debug_info    0x00000000      0xf3d Src\printf.o
+ .debug_abbrev  0x00000000      0x201 Src\printf.o
+ .debug_loc     0x00000000       0x1f Src\printf.o
+ .debug_aranges
+                0x00000000       0x28 Src\printf.o
+ .debug_ranges  0x00000000       0x18 Src\printf.o
+ .debug_line    0x00000000      0x2db Src\printf.o
+ .debug_str     0x00000000      0xb5d Src\printf.o
+ .comment       0x00000000       0x7d Src\printf.o
+ .debug_frame   0x00000000       0x40 Src\printf.o
+ .ARM.attributes
+                0x00000000       0x39 Src\printf.o
  .text          0x00000000        0x0 Src\stm32f3xx_hal_msp.o
  .data          0x00000000        0x0 Src\stm32f3xx_hal_msp.o
  .bss           0x00000000        0x0 Src\stm32f3xx_hal_msp.o
@@ -1219,6 +1238,7 @@ LOAD Inc\CAN\CAN.o
 LOAD Src\can.o
 LOAD Src\gpio.o
 LOAD Src\main.o
+LOAD Src\printf.o
 LOAD Src\stm32f3xx_hal_msp.o
 LOAD Src\stm32f3xx_it.o
 LOAD Src\syscalls.o
