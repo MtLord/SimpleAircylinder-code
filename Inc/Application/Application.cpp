@@ -90,10 +90,11 @@ void App::TaskShift()
 		{
 			this->Open();
 		}
-		else if(ORDER_ID==AIR_CLOSE)
+		if(ORDER_ID==AIR_CLOSE)
 		{
 			this->Close();
 		}
+		CanRxFlag=false;
 	}
 }
 

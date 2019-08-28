@@ -33,12 +33,13 @@
 
 /* Private typedef -----------------------------------------------------------*/
 /* USER CODE BEGIN PTD */
-
+extern void FilterConfig();
 /* USER CODE END PTD */
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-
+#define RUN
+//#define DEBUG
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -94,8 +95,12 @@ int main(void)
   MX_CAN_Init();
   MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
+
   LowlayerHandelTypedef hlow;
+  FilterConfig();
   App app(&hlow);
+//  float a=0;
+//  char b;
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -105,7 +110,25 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
+#ifdef RUN
 	  app.TaskShift();
+#endif
+
+#ifdef DEBUG
+	  //hlow.DebugLed();
+	  hlow.DebugAircylinder(2);
+
+#endif
+//	  scanf("%c\r",&b);
+//	  printf("a:%f\n\r",a);
+	     //scanf("%f\r",&a);
+
+	 //  printf("printok/n/r");
+
+
+	 // printf("ok\n\r");
+//	  hlow.extcan.Send(0x24, 0, 0);
+//	  HAL_Delay(1);
   }
   /* USER CODE END 3 */
 }

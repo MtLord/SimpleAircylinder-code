@@ -30,6 +30,67 @@ public:
 	{
 
 	}
+	void DebugLed()
+	{
+		HAL_GPIO_TogglePin(GPIOB,GPIO_PIN_1);
+		HAL_GPIO_TogglePin(GPIOB,GPIO_PIN_0);
+		HAL_Delay(500);
+	}
+	void DebugAircylinder(int num)
+	{
+		switch(num)
+		{
+		case 1:
+				 A1.Close();
+				 HAL_Delay(500);
+				 A1.Open();
+				 HAL_Delay(500);
+				 break;
+		case 2:
+			 A2.Close();
+			 HAL_Delay(500);
+			 A2.Open();
+			 HAL_Delay(500);
+			 break;
+		case 3:
+			 A3.Close();
+			HAL_Delay(500);
+			A3.Open();
+			HAL_Delay(500);
+			break;
+		case 4:
+			A4.Close();
+			HAL_Delay(500);
+			A4.Open();
+			HAL_Delay(500);
+			break;
+		case 5:
+			A5.Close();
+			HAL_Delay(500);
+			A5.Open();
+			HAL_Delay(500);
+			break;
+		case 6:
+			A6.Close();
+			HAL_Delay(500);
+			A6.Open();
+			HAL_Delay(500);
+			break;
+		case 7:
+			A7.Close();
+			HAL_Delay(500);
+			A7.Open();
+			HAL_Delay(500);
+			break;
+		case 8:
+			A8.Close();
+			HAL_Delay(500);
+			A8.Open();
+			HAL_Delay(500);
+			break;
+
+		}
+	}
 };
 
 
