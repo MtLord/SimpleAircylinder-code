@@ -5019,7 +5019,7 @@ void Aircylinder::Close()
 	...
 
 0800258c <_ZN3App4OpenEv>:
-#define NODE_ID_Pos 2U
+#define NODE_ID_Pos 4U
 #define ORDER_ID ((RXmsg.ExtId>>ORDER_BIT_Pos)&0xFF)
 #define NODE_ID ((RXmsg.ExtId>>NODE_ID_Pos)&0xF)
 
@@ -5249,7 +5249,7 @@ void App::TaskShift()
 		this->node_id=NODE_ID;
  80026fc:	4b11      	ldr	r3, [pc, #68]	; (8002744 <_ZN3App9TaskShiftEv+0x58>)
  80026fe:	685b      	ldr	r3, [r3, #4]
- 8002700:	089b      	lsrs	r3, r3, #2
+ 8002700:	091b      	lsrs	r3, r3, #4
  8002702:	b29b      	uxth	r3, r3
  8002704:	f003 030f 	and.w	r3, r3, #15
  8002708:	b29a      	uxth	r2, r3
@@ -5258,7 +5258,7 @@ void App::TaskShift()
 		if(ORDER_ID==AIR_OPEN)
  800270e:	4b0d      	ldr	r3, [pc, #52]	; (8002744 <_ZN3App9TaskShiftEv+0x58>)
  8002710:	685b      	ldr	r3, [r3, #4]
- 8002712:	099b      	lsrs	r3, r3, #6
+ 8002712:	0a1b      	lsrs	r3, r3, #8
  8002714:	b2db      	uxtb	r3, r3
  8002716:	2b21      	cmp	r3, #33	; 0x21
  8002718:	d102      	bne.n	8002720 <_ZN3App9TaskShiftEv+0x34>
@@ -5270,7 +5270,7 @@ void App::TaskShift()
 		if(ORDER_ID==AIR_CLOSE)
  8002720:	4b08      	ldr	r3, [pc, #32]	; (8002744 <_ZN3App9TaskShiftEv+0x58>)
  8002722:	685b      	ldr	r3, [r3, #4]
- 8002724:	099b      	lsrs	r3, r3, #6
+ 8002724:	0a1b      	lsrs	r3, r3, #8
  8002726:	b2db      	uxtb	r3, r3
  8002728:	2b22      	cmp	r3, #34	; 0x22
  800272a:	d102      	bne.n	8002732 <_ZN3App9TaskShiftEv+0x46>
