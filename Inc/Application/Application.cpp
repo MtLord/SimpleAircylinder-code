@@ -11,8 +11,7 @@ extern unsigned char RxFIFO_Data[6];
 extern CAN_RxHeaderTypeDef RXmsg;
 extern bool CanRxFlag;
 
-#define ORDER_BIT_Pos 8U
-#define NODE_ID_Pos 4U
+
 #define ORDER_ID ((RXmsg.ExtId>>ORDER_BIT_Pos)&0xFF)
 #define NODE_ID ((RXmsg.ExtId>>NODE_ID_Pos)&0xF)
 

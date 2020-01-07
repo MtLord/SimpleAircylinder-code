@@ -7,7 +7,8 @@
 
 #ifndef DEFINEORDER_H_
 #define DEFINEORDER_H_
-
+#define ORDER_BIT_Pos 8U
+#define NODE_ID_Pos 4U
 enum{
 	SET_DUTY=0x2,
 	AIR_OPEN=0x21,

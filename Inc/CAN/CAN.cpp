@@ -11,8 +11,8 @@ unsigned char RxFIFO_Data[6];
 CAN_RxHeaderTypeDef RXmsg;
 
 int rx_led=0;
-#define MASKID_L 0xF0<<9|0x1<<2
-#define FILTERID_L 0x20<<9|0x1<<2 //stdidと命令IDの上位ビットでマスクをかける
+#define MASKID_L 0xF0<<11|0x1<<4
+#define FILTERID_L 0x20<<11|0x1<<4 //stdidと命令IDの上位ビットでマスクをかける
 
 #define TOGGLE_TX_LED HAL_GPIO_TogglePin(GPIOB,GPIO_PIN_1);
 #define TOGGLE_RX_LED  HAL_GPIO_TogglePin(GPIOB,GPIO_PIN_0);

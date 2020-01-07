@@ -1,3 +1,3 @@
-Application.cpp:19:6:void App::Open()	16	static
-Application.cpp:51:6:void App::Close()	16	static
-Application.cpp:84:6:void App::TaskShift()	16	static
+Application.cpp:18:6:void App::Open()	16	static
+Application.cpp:50:6:void App::Close()	16	static
+Application.cpp:83:6:void App::TaskShift()	16	static
